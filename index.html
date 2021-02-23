@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Update</title>
+</head>
+<style>
+
+    body{
+        background-image: url(bg.jpg);
+        background-size: cover;
+    }
+
+    .Header{
+        position: absolute;
+        right: 29%;
+        color: rgb(61, 58, 58);
+        font-weight: 600px;
+        font-size: 25px;
+
+    }
+
+    .SearchBar{
+        position: absolute;
+        width: 254px;
+        height: 29px;
+        top: 20%;
+        right: 38%;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        border: 0px;
+        text-align: center;
+    }
+
+    .SearchButton{
+        position: absolute;
+        top: 20%;
+        right: 34%;
+    }
+
+    .LeftInfo{
+        position: absolute;
+        top: 39%;
+        left: 20%;
+        
+
+    }
+    .RightInfo{
+        position: absolute;
+        top: 39%;
+        left: 50%;
+        
+    }
+
+    .boxed {
+        border: 2px solid rgb(61, 58, 58);;
+        width: 180px;
+        height: 23px;
+        text-align: center;
+    }
+    
+    h2{
+        color: rgb(61, 58, 58);
+        font-weight: 700px;
+    }
+
+    .countryName{
+        position: absolute;
+        top: 27%;
+        left: 37%;
+        color: rgb(61, 58, 58);
+
+    }
+        
+</style>
+
+<body>
+    <div class="Main">
+
+        <div class="Header">
+            <u><h1>COVID UPDATES</h1></u>
+        </div>
+
+        <div>
+            <input type="text" class="SearchBar" placeholder="Search your country here" id="inputBar">
+        </div>
+
+        <div class="SearchButton">
+            <button><img src="search.jpg" alt="" id="searchButton"></button>
+        </div>
+
+        <div class="countryName">
+            <h1 id="countryName">Search your Contry</h1>
+        </div>
+
+        <div class="LeftInfo">
+            <h2>Total Population : </h2>
+            <h3 class="boxed" id ="totalPop" style="color: green;"></h3>
+
+            <h2>Total Cases : </h2>
+            <h3 class="boxed" id="totalCases" style="color: red;"></h3>
+
+            <h2>New Cases : </h2>
+            <h3 class="boxed" id="newCases" style="color: red;"></h3>
+
+            <h2>Total Deaths : </h2>
+            <h3 class="boxed" id="totalDeath" style="color: rgb(88, 81, 81);"></h3>
+
+        </div>
+
+        <div class="RightInfo">
+            <h2>Total Recovered : </h2>
+            <h3 class="boxed" id="totalRecovered" style="color: green;"></h3>
+
+            <h2>Active Cases : </h2>
+            <h3 class="boxed" id="activeCase" style="color: red;"></h3>
+        </div>
+
+
+    </div>    
+</body>
+<script src="index.js"></script>
+</html>
