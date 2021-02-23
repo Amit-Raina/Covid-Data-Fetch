@@ -26,21 +26,21 @@ async function getData (){
         covidData = covidData['response'][0];
         //console.log(covidData);
 
-        await dataFill();
+        dataFill();
     }
     catch(e){
         alert("Don't use abbreviation, Please Provide valid Country Name !");
     }
 }
 
-async function dataFill(){
-     totalPopulation.innerText =  await covidData['population'];
-     totalCases.innerText = await covidData['cases']['total'];
-     totalRecovered.innerText = await covidData['cases']['recovered'];
-     activeCase.innerText = await covidData['cases']['active'];
-     newCases.innerText = await covidData['cases']['new'];
-     totalDeath.innerText = await covidData['deaths']['total'];
-     countryName.innerText = await `${covidData['country']}, ${covidData['continent']}`;
+function dataFill(){
+     totalPopulation.innerText = covidData['population'];
+     totalCases.innerText = covidData['cases']['total'];
+     totalRecovered.innerText = covidData['cases']['recovered'];
+     activeCase.innerText = covidData['cases']['active'];
+     newCases.innerText = covidData['cases']['new'];
+     totalDeath.innerText = covidData['deaths']['total'];
+     countryName.innerText = `${covidData['country']}, ${covidData['continent']}`;
 }
 
 searchButton.addEventListener('click',function(){
